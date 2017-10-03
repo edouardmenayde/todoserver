@@ -1,0 +1,29 @@
+[package]
+name = "todo_server"
+version = "0.1.0"
+authors = ["Edouard Menayde <scrunshes@gmail.com>"]
+
+[dependencies]
+rocket = "0.3.3"
+rocket_codegen = "0.3.3"
+diesel = { version = "*", features = ["mysql"] }
+diesel_codegen = { version = "*", features = ["mysql"] }
+r2d2-diesel = "*"
+r2d2 = "*"
+dotenv = "0.9.0"
+serde_json = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+
+[dependencies.rocket_contrib]
+version = "*"
+default-features = false
+features = ["json"]
+
+[lib]
+name = "todo_server"
+path = "src/todo_server/lib.rs"
+
+[[bin]]
+name = "todo_server"
+doc = false
