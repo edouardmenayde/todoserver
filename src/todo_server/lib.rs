@@ -22,6 +22,7 @@ pub type Pool = r2d2::Pool<ConnectionManager<MysqlConnection>>;
 
 // The URL to the database, set via the `DATABASE_URL` environment variable.
 static DATABASE_URL: &'static str = env!("DATABASE_URL");
+//static DATABASE_URL: &'static str = "mysql://root@localhost/todos";
 
 /// Initializes a database pool.
 pub fn init_pool() -> Pool {
